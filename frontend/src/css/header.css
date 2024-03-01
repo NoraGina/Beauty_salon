@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.navbar{
+    background-color: #54504dfc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    font-family: 'Anton', sans-serif;
+    padding: 3px 10px 3px 10px;
+    height: auto;
+    width: 100%;
+}
+.navbar-nav {
+    /* display: none; */
+    margin-right: auto;
+    width: 100%;
+}
+.left-part {
+    display: flex;
+    margin-right: auto;
+    transition: 0.5s;
+  }
+  
+  .right-part {
+    display: flex;
+    margin-left: auto;
+    transition: 0.5s;
+  }
+  
+  .left-part .nav-item,
+  .left-part .sub-menu {
+    margin-left: 15px;
+  }
+  
+  .right-part .nav-item{
+    margin-right: 15px;
+  }
+  
+  .right-part:last-of-type {
+    margin-right: 20px;
+  }
+  .logo-box {
+    background-size: cover;
+    height: 60px;
+    width: fit-content;
+  }
+  
+  .logo-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    margin: auto;
+    height: 60px;
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+    background-color: inherit;
+    border: none;
+    color: rgb(223, 223, 3);
+    font-size: 2.5em;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .hamburger:hover {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-item .nav-link,
+  .sub-menu .nav-link {
+    color: #E8DA20;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s linear;
+  }
+  .nav-item .logout-btn{
+    background-color: inherit;
+    color:#E8DA20;
+    border:none;
+    font-family: 'Anton', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: .5s linear;
+  }
+   #loginIcon, #logoutIcon{
+    -webkit-text-stroke: 1px;
+  }
+  .nav-icon {
+    font-size: 1.1em;
+  }
+  
+  .nav-item .nav-link:hover,
+  .nav-item .logout-btn:hover,
+  .sub-menu .btn:hover,
+  .sub-menu .content .nav-link:hover {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  .inactive{
+    display: none;
+  }
+  .isActive {
+    display: flex;
+  }
+  .sub-menu {
+    float: left; 
+    overflow: hidden;
+  
+ }
+ .sub-menu .btn {
+  outline: none;
+  color: #E8DA20;;
+  /* padding: 14px 16px; */
+  background-color: inherit;
+  font-family: 'Anton', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: .5s linear;
+  margin: 0;
+  border: none;
+    
+ }
+ /* .navbar a:hover, .sub-menu:hover, .btn  {
+  background-color: black;
+} */
+.content {
+  display: none;
+  position: absolute;
+  background-color: #767474fc;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; 
+  padding: 5px;
+}
+
+.submenu-item .nav-link {
+  float: none;
+  color: #E8DA20;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: .5s linear;
+  cursor: pointer;
+}
+
+ 
+.sub-menu:hover .content {
+display: block;
+}
+  /*==============MEDIA QUERY=====================*/
+/* for desktop */
+ @media (min-width: 1200px) {
+  
+    .navbar-nav{
+      display: flex;
+    }
+    
+  } 
+  
+  /* for laptops */
+   @media only screen and (min-width: 991px) and (max-width: 1200px){
+      .navbar-nav{
+        display: flex;
+      }
+      .logo-box{
+        width: 20vw;
+      }
+      .logo-img{
+        width: 100%;
+      }
+  } 
+  /* for large tablets */
+   @media only screen and (min-width: 769px) and (max-width: 990px){
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 4px;;
+  }
+    
+  .logo-box{
+    margin-right: auto;
+    height:70px;
+    width: 30vw;  
+  }
+  .logo-img{
+    height:70px;
+    width:70%;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+   .navbar-nav{
+    justify-content: flex-start;
+    flex-direction: column;
+   }
+   .left-part,
+   .right-part{
+      flex-direction: column;
+      width: 100%;
+  }
+  .left-part{
+    margin-top: 10px;
+  }
+  .right-part{
+    margin-left: 15px;
+  }
+  .nav-item,
+  .sub-menu{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .sub-menu{
+
+    float: none;
+     }
+        .item {
+          width: 15rem;
+        }
+        
+  } 
+  /* for smaller tablets*/
+   @media only screen and (min-width: 481px) and (max-width: 768px) {
+      .logo-box{
+          margin-right: auto;
+          height:60px;
+          width: 30vw;  
+      }
+      .logo-img{
+        height:60px;
+        width:90%;
+      }
+       .hamburger {
+          display: block;
+          position: absolute;
+          right: 15px;
+          top: 4px;;
+      }
+      .navbar{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+       .navbar-nav{
+        justify-content: flex-start;
+        flex-direction: column;
+       }
+       
+        .left-part,
+        .right-part{
+          flex-direction: column;
+          width: 100%;
+        }
+        .left-part{
+          margin-top: 10px;
+        }
+        .right-part{
+          margin-left: 10px;
+        }
+     
+        .nav-item,
+        .sub-menu{
+          display: block;
+          margin-bottom: 10px;
+        }
+        .sub-menu{
+    
+          float: none;
+           }
+       
+       
+  } 
+  
+  /* for cellphones */
+  @media only screen and (max-width: 480px){
+      
+    .logo-box{
+      margin-right: auto;
+      height:60px;
+      width: 40vw;  
+  }
+  .logo-img{
+    height:60px;
+    width:100%;
+  }
+   .hamburger {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 4px;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+   .navbar-nav{
+    justify-content: flex-start;
+    flex-direction: column;
+   }
+   
+    .left-part,
+    .right-part{
+      flex-direction: column;
+      width: 100%;
+    }
+    .left-part{
+      margin-top: 10px;
+    }
+    .right-part{
+      margin-left: 10px;
+    }
+    
+    .nav-item,
+    .sub-menu{
+      display: block;
+      margin-bottom: 10px;
+    }
+    .sub-menu{
+
+      float: none;
+       }
+    
+   
+  }

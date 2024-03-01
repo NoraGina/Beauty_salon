@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #eee4e4;
+}
+.text-danger{
+    color: rgb(130, 6, 6);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.edit-icon{
+    color: rgb(12, 133, 12);
+    font-size: x-large;
+    opacity: 0.7;
+}
+.delete-icon{
+    color: #c10707;
+    font-size: x-large;
+    opacity: 0.7;
+}
+.delete-icon:hover,
+.edit-icon:hover,
+.link-item:hover{
+    opacity: 1;
+}
+.link-item{
+    opacity: 0.7;
+    cursor: pointer;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}

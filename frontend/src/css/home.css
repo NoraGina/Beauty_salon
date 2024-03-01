@@ -1,0 +1,263 @@
+:root{
+  --color: #333; 
+  }
+  body {
+    font-family: 'Red Hat Text', sans-serif;
+  }
+ main{
+  margin-top: 64px;
+ }
+.home-container{
+  text-align: center;
+  color: var(--color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+ flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/salon_container1_1920-min.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+    
+}
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.home-container p {
+  color:darkblue;
+  font-size: 2em;
+  font-weight: 700;
+  max-width: 52ch;
+  line-height: 1.5;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.home-container a {
+  display: inline-block;
+  padding: 1em 3.5em;
+  background-color: var(--color);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0.3em;
+  font-weight: 700;
+  letter-spacing: .5px;
+  font-size: .875rem;
+}
+
+.blank,
+.other {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  width: 100%;
+  min-height: 40vh;
+  background-color: var(--color);
+  
+}
+
+.content-text .content{
+    color: white;
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 24px;
+  }
+ 
+  .first-letter{
+    float: left;
+    font-weight: 400;
+    font-size: 2.5em;
+    line-height: 44px;
+  }
+  .red{
+    color: #dec1b2;
+  }
+  .second {
+    background-image: url("../img/salon_container2_1920-min.png");
+    background-attachment: fixed;
+    height: 1200px;
+    display: flex;
+  }
+
+  .cards{
+    margin-top: 10%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+   
+  }
+  
+ .back h3{
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 0.5em;
+    
+  }
+  .back h2{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 1.5em;
+  }
+  .card > a {
+    margin-bottom: 2em;
+  }
+  
+  .item {
+    /* display: flex; */
+    /* max-width: 320px; */
+    background-color: white;
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    border-radius: .5em;
+   display: flex;
+    margin-left: 1%;
+    margin-bottom: 5px;
+    width: 17rem;
+    height: 300px;
+    -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  }
+  .image-box{
+      width: 17rem;
+      height: 300px;
+      border-radius: .5em;
+      background-size: cover;
+      -webkit-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+    box-shadow: 0px 29px 38px -15px rgba(0,0,0,0.43);
+  }
+  .image{
+      -o-object-fit: cover;
+      object-fit: cover;
+   -o-object-position: center;
+      object-position: center;
+   /* margin: auto; */
+      border-radius: .5em;
+      width: 100%;
+      height: 100%;
+  }
+  .front h2
+{
+  position: absolute;
+  padding: 10px;
+  top: 240px;
+  color: #000;
+}
+.front h3
+{
+  position: absolute;
+  padding: 10px;
+  top: 210px;
+  color: #000;
+}
+  .item > .front
+{
+  position: absolute;
+  transform: perspective(600px) rotateY(0deg);
+  
+  width: 17rem;
+      height: 300px;
+  
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform .5s linear 0s;
+}
+.item:hover > .front
+{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.back h2
+{
+  position: absolute;
+  padding: .5em;
+}
+.back h3
+{
+  position: absolute;
+  padding: .5em;
+}
+
+.back p
+{
+  position: absolute;
+  padding: .5em;
+  bottom: 20px;
+  font-size: 15px;
+}
+.back p .link-profile{
+  color: white;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: .5em;
+}
+.back p .link-profile:hover{
+color: goldenrod;
+}
+.item > .back
+{
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background: #262626;
+  color: #fff;
+  width: 17rem;
+      height: 300px;
+  border-radius: 10px;
+  padding: 5px;
+  backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+  transition: transform .5s linear 0s;
+}
+.item:hover > .back
+{
+  transform: perspective(600px) rotateY(0deg);
+}
+  
+  /* .img {
+    width: 90%;
+    height: 200px;
+    background-color: lightgrey;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;;
+  } */
+  
+
+/*=========== MEDIA QUERY =========== */
+/* for large tablets */
+@media only screen and (min-width: 769px) and (max-width: 990px){
+    .home-container{
+      background-image: url("../img/salon_container1_1000.png");
+      
+    }
+    
+  }
+  
+  /* for smaller tablets*/
+  @media only screen and (min-width: 481px) and (max-width: 768px){
+    
+    .home-container{
+      background-image: url("../img/salon_container1_500-min.png");
+      
+    }
+   
+    
+  }
+  
+  /* for cellphones */
+  @media only screen and (max-width: 480px){
+    
+    .home-container{
+      background-image: url("../img/salon_container1_500-min.png");
+    
+    }
+   
+  }
