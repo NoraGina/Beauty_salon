@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
+.update-user-container{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 3%;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+}
+#updateUserForm{
+    background-color: rgba(0, 128, 0, 0.093);
+    border: 3px solid rgba(0, 128, 0, 0.799);
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 20px;
+    width: auto;
+}
+.updateUser-form-group{
+    margin-bottom: 5px;
+}
+.updateUser-form-group .updateUser-title{
+    color: darkgreen;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
+.updateUser-form-group .updateUser-span{
+    color: darkgreen;
+    display: inline-block;
+    font-size: 1.2em;
+    width: 130px;
+}
+.updateUser-form-group .updateUser-input{
+    border: 1px solid darkgreen;
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 1em;
+    padding: 15px 2px;
+    height: 30px;
+    width: 300px;  
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.updateUser-btn{
+    background: rgb(12, 175, 61);
+    background: linear-gradient(143deg, rgba(3, 159, 60, 0.743) 0%, rgb(52, 70, 99) 35%, rgb(12, 175, 61) 100%);
+    border: none;
+    border-radius: 3px;
+    color: wheat;
+    font-size: 1em;
+    font-weight: 600;
+    float: right;
+    padding: 6px 10px;
+    opacity: 0.7;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    text-transform: uppercase;
+}
+.updateUser-btn:hover{
+    color: white;
+    opacity: 1;
+}
+.checkboxex{
+    display:inline-flex;
+    flex-direction: column;
+}
+
+.checkbox-input {
+    display: none;
+    &:checked + label .checkbox {
+      &:after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+  
+  .checkbox {
+    border: 1px solid darkgreen;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+  margin-right: 10px;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 12px;
+      height: 12px;
+      background-color: darkgreen;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+}
+@media only screen and (max-width: 480px){
+    #updateUserForm{
+        width: 90%;
+    }
+    .updateUser-form-group{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        
+    }
+    .updateUser-container{
+        padding-top: 20%;
+        padding-bottom: 10%;
+        height: auto;
+    }
+     /* #updateUserForm{
+        
+        margin-top: 20%;
+    }  */
+    .updateUser-form-group .updateUser-input,
+    
+    .updateUser-btn{
+        margin-left:auto;
+        width: 100%;
+    }
+    
+}

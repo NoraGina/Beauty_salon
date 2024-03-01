@@ -2,6 +2,10 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Login from './components/Login';
+import Users from './components/Users';
+import AddUser from './components/AddUser';
+import EditUser from './components/EditUser';
 
 const App =()=>{
 
@@ -58,6 +62,16 @@ return(
              />
       <Routes>
       <Route path="/" element={<Home isStaff={!!isStaff} isAdmin={!!isAdmin}/>}/>
+      {!user&& <>
+        <Route path="login" element={<Login/>}/>
+      </>}
+      {!!isAdmin&&<>
+        <Route path="users" element={<Users isAdmin={!!isAdmin}/>}/>
+        <Route path="addUser" element={<AddUser isAdmin={!!isAdmin}/>}/>
+        <Route path="editUser/:id" element={<EditUser/>}/>
+      </>}
+      {!!isStaff&&<>
+      </>}
       </Routes>
   </div>
 )
