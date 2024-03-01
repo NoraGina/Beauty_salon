@@ -124,11 +124,7 @@ const Header = (props)=>{
                                 <i className="bi bi-person-plus-fill"> Add user</i>
                             </Link>
                         </div>
-                        <div className="nav-item">
-                            <Link to="/profiles" className="nav-link">
-                            <i className="bi bi-card-list"> Profiles</i>
-                            </Link>
-                        </div>
+                       
                         <div className="sub-menu">
                         <button className="btn"><i className="bi bi-list-ul"></i>Price list<i className="bi bi-caret-down-fill"></i></button>
                         <div className='content'>

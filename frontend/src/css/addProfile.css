@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+.addProfile-container{
+    /* background-color: rgba(209, 186, 116, 0.459); */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+#addProfileForm{
+    background-color: rgba(167, 118, 50, 0.455);
+    border: 3px solid rgb(159,91,3);
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 20px;
+    width: auto;
+}
+.addProfile-input::placeholder,
+.addProfile-textarea::placeholder {
+    color: #394251;
+    font-family: "Old Standard TT", serif;
+    font-size: 1.3em;
+    font-style: italic;
+  }
+.addProfile-form-group{
+    margin-bottom: 5px;
+}
+.addProfile-form-group .addProfile-title{
+    color: blanchedalmond;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
+.addProfile-form-group .addProfile-span{
+    color: blanchedalmond;
+    display: inline-block;
+    font-size: 1.2em;
+    width: 130px;
+}
+.about-you{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* .text-danger{
+    color: rgb(130, 6, 6);
+    font-size: 1.2em;
+    font-weight: 700;
+} */
+.addProfile-form-group .addProfile-input{
+    border: 1px solid rgb(90, 3, 3);
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 1em;
+    padding: 15px 2px;
+    height: 30px;
+    width: 300px;  
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+ .addProfile-textarea{
+    border: 1px solid rgb(90, 3, 3);
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 3px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+   
+}
+ .addProfile-input:hover,
+ .addProfile-textarea:hover,
+ .addProfile-select:hover{
+    border: 2px solid rgb(90, 3, 3);
+    box-shadow: 0 0 5px rgb(41, 6, 6);
+}
+.addProfile-input:focus,
+.addProfile-textarea:focus,
+.addProfile-select:focus{
+    border: 2px solid rgb(90, 3, 3);
+    box-shadow: 0 0 5px rgb(7, 7, 7);
+    outline: 0;
+}
+ .addProfile-select{
+    border: 1px solid rgb(90, 3, 3);
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 35px;
+    height: 30px;
+    padding: 5px 20px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    width: 300px;    
+}
+
+.addProfile-form-group #addProfileFile{
+    height:30px;
+}
+.input-file{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+} 
+ .input-file + label {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(90, 3, 3);
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 10px;
+    margin-left: 9px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 295px;  
+} 
+
+.input-file:focus + label,
+.input-file + label:hover {
+    border: 2px solid rgb(90, 3, 3);
+    box-shadow: 0 0 5px rgb(41, 6, 6);
+}
+.input-file:focus + label {
+	outline: 1px dotted rgb(90, 3, 3);
+	outline: -webkit-focus-ring-color auto 5px;
+} 
+.input-file + label * {
+	pointer-events: none;
+}
+ #imageName{
+    
+    color:blanchedalmond;
+    font-size: 1em;
+    padding: 10px 0 5px 140px;
+    width: 250px;
+}
+.addProfile-btn{
+    background: rgb(159,91,3);
+    background: linear-gradient(143deg, rgba(159,91,3,0.742734593837535) 0%, rgba(90,3,3,1) 35%, rgba(175,104,12,1) 100%);
+    border: none;
+    border-radius: 3px;
+    color: wheat;
+    font-size: 1em;
+    font-weight: 600;
+    float: right;
+    padding: 6px 10px;
+    opacity: 0.7;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    text-transform: uppercase;
+}
+.addProfile-btn:hover{
+    color: white;
+    opacity: 1;
+}
+@media only screen and (max-width: 480px){
+    .addProfile-form-group{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .addProfile-container{
+        padding-top: 20%;
+        padding-bottom: 10%;
+        height: auto;
+    }
+     /* #addProfileForm{
+        
+        margin-top: 20%;
+    }  */
+    .addProfile-form-group .addProfile-input,
+    .addProfile-form-group #jobTitleOptions,
+    .input-file + label,
+    .addProfile-form-group .addProfile-textarea,
+    .addProfile-btn{
+        margin-left:auto;
+        width: 100%;
+    }
+    
+}
+/*onClick={submit}*/

@@ -23,10 +23,11 @@ const EditUser =()=>{
     const {id} = useParams();
     useEffect(() => {
         getUser();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const getUser = async ()=> {
         try {
-           await axios.get(`http://localhost:80/BeautySalonTest/react-api/PHP/controllers/GetOneUser.php/${id}`)
+           await axios.get(`http://localhost:80/BeautySalon/backend/controllers/GetOneUser.php/${id}`)
             .then(res => {
               console.log(res.data.userList)
               setInputs(res.data.userList);
@@ -52,7 +53,7 @@ const EditUser =()=>{
             id: inputs.id,
             
           }
-        await axios.put(`http://localhost:80/BeautySalonTest/react-api/PHP/controllers/EditUser.php/${id}`, formData)
+        await axios.put(`http://localhost:80/BeautySalon/backend/controllers/EditUser.php/${id}`, formData)
         .then(function(res){
             
              if(res.data.status==="Valid"){

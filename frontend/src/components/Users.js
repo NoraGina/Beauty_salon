@@ -1,22 +1,21 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { Link} from "react-router-dom";
 import React from 'react';
 
 import "../css/main.css";
 import "../css/users.css";
 import Footer from "./Footer";
-//import Modal from "./Modal";
+
 
 const Users = ()=>{
-    //const [modalOpen, setModalOpen] = useState(false);
+   
     const [users, setUsers] = useState([]);
-   // const [id, setId] = useState('');
-  //console.log(props);
+   
     useEffect(() => {
         getUsers();
        
-       
+       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     const getUsers = async () => {
         try {
@@ -31,7 +30,7 @@ const Users = ()=>{
     
     
     const deleteUser=(id)=>{ 
-        axios.post(`http://localhost:80/BeautySalonTest/react-api/PHP/controllers/DeleteUser.php/${id}`)
+        axios.post(`http://localhost:80/BeautySalon/backend/controllers/DeleteUser.php/${id}`)
         .then(result=>{
           if(result.data.status ==='Valid'){
             

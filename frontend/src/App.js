@@ -2,10 +2,13 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Team from './components/Team';
 import Login from './components/Login';
 import Users from './components/Users';
 import AddUser from './components/AddUser';
 import EditUser from './components/EditUser';
+import AddProfile from './components/AddProfile';
+import EditProfile from './components/EditProfile';
 
 const App =()=>{
 
@@ -62,6 +65,7 @@ return(
              />
       <Routes>
       <Route path="/" element={<Home isStaff={!!isStaff} isAdmin={!!isAdmin}/>}/>
+      <Route path="team" element={<Team/>}/>
       {!user&& <>
         <Route path="login" element={<Login/>}/>
       </>}
@@ -69,8 +73,12 @@ return(
         <Route path="users" element={<Users isAdmin={!!isAdmin}/>}/>
         <Route path="addUser" element={<AddUser isAdmin={!!isAdmin}/>}/>
         <Route path="editUser/:id" element={<EditUser/>}/>
+        <Route path="profile/add/:id" element={<AddProfile isAdmin={!!isAdmin}/>}/>
+        <Route path="/editProfile/:id" element={<EditProfile isStaff={!!isStaff} isAdmin={!!isAdmin}/>}/>
       </>}
       {!!isStaff&&<>
+        <Route path="profile/add" element={<AddProfile isAdmin={!!isAdmin}/>}/>
+        <Route path="/editProfile/:id" element={<EditProfile isAdmin={!!isAdmin} isStaff={!!isStaff} />}/>
       </>}
       </Routes>
   </div>
