@@ -87,7 +87,7 @@ const EditProfile = (props)=>{
             'content-type': 'multipart/form-data'
           }
         }).then(function(res){
-          if(res.data.status="Valid")
+          if(res.data.status==="Valid")
           {
            
            if(props.isAdmin){

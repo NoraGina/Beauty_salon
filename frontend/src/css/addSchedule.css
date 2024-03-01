@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+.addSchedule-container{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 3%;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+}
+#addScheduleForm{
+    background-color: rgba(101, 136, 101, 0.204);
+    border: 2px solid rgba(0, 128, 0, 0.251);
+    border-radius: 3px;
+    box-shadow: 0 0 40px rgba(5, 25, 14, 0.6);
+    padding: 20px;
+    width: auto;
+}
+.addSchedule-form-group{
+    margin-bottom: 5px;
+}
+.addSchedule-form-group .addSchedule-title{
+    color:darkgreen;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
+.addSchedule-form-group .addSchedule-span{
+    color: darkgreen;
+    display: inline-block;
+    font-size: 1em;
+    width: 140px;
+}
+.addSchedule-form-group .addSchedule-input{
+    border: 1px solid rgb(1, 64, 35);
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 1em;
+    padding: 15px 2px;
+    height: 30px;
+    width: 300px;  
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.addSchedule-form-group input[type=date],
+.addSchedule-form-group input[type=time]
+{
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+}
+.addSchedule-form-group #addScheduleSelect,
+.addSchedule-form-group #addScheduleSelectStatus{
+    border: 1px solid rgb(1, 64, 35);
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1em;
+    /* line-height: 35px; */
+    height: 35px;
+    padding: 5px 20px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    width: 300px;    
+}
+
+.addSchedule-btn{
+    background: rgb(31, 175, 12);
+    background: linear-gradient(143deg, rgba(3, 159, 24, 0.743) 0%, rgb(52, 99, 63) 35%, rgb(12, 175, 72) 100%);
+    border: none;
+    border-radius: 3px;
+    color: wheat;
+    font-size: 1em;
+    font-weight: 600;
+    float: right;
+    padding: 6px 10px;
+    opacity: 0.7;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    text-transform: uppercase;
+}
+.addSchedule-btn:hover{
+    color: white;
+    opacity: 1;
+}
+@media only screen and (max-width: 480px){
+    .addSchedule-form-group{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .addSchedule-container{
+        padding-top: 20%;
+        padding-bottom: 10%;
+        height: auto;
+    }
+     /* #addScheduleForm{
+        
+        margin-top: 20%;
+    }  */
+    .addSchedule-form-group .addSchedule-input,
+    
+    .input-file + label,
+    
+    .addSchedule-btn{
+        margin-left:auto;
+        width: 100%;
+    }
+    
+}

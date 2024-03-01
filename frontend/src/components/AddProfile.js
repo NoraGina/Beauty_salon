@@ -25,8 +25,9 @@ const AddProfile = (props)=>{
         setUserId(user.id);
         setUserName(user.userName);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
        
-    }, [isUser.id, isUser.userName, user.id, user.userName]);
+    }, []);
     const getUser = async ()=> {
         try {
            await axios.get(`http://localhost:80/BeautySalon/backend/controllers/GetOneUser.php/${id}`)

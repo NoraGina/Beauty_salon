@@ -52,7 +52,7 @@ const Team =()=>
                         ))}
                     </div>
                     : <div className="team-card">
-                        <h3 className="name-title" style={{ color: "red" }}></h3>
+                        <h3 className="name-title" style={{ color: "red" }}>No team</h3>
                     </div>}
             </div>
         </main><Footer></Footer></>

@@ -9,6 +9,8 @@ import AddUser from './components/AddUser';
 import EditUser from './components/EditUser';
 import AddProfile from './components/AddProfile';
 import EditProfile from './components/EditProfile';
+import AddSchedule from './components/AddSchedule';
+import Schedules from './components/Schedules';
 
 const App =()=>{
 
@@ -75,10 +77,14 @@ return(
         <Route path="editUser/:id" element={<EditUser/>}/>
         <Route path="profile/add/:id" element={<AddProfile isAdmin={!!isAdmin}/>}/>
         <Route path="/editProfile/:id" element={<EditProfile isStaff={!!isStaff} isAdmin={!!isAdmin}/>}/>
+        <Route path='/addSchedule/:id' element={<AddSchedule isAdmin={!!isAdmin} />}/>
+        <Route path='/schedules/:id' element={<Schedules/>}/>
       </>}
       {!!isStaff&&<>
         <Route path="profile/add" element={<AddProfile isAdmin={!!isAdmin}/>}/>
         <Route path="/editProfile/:id" element={<EditProfile isAdmin={!!isAdmin} isStaff={!!isStaff} />}/>
+        <Route path='/addSchedule/:id' element={<AddSchedule />}/>
+        <Route path='/schedules/:id' element={<Schedules isStaff={!!isStaff}/>}/>
       </>}
       </Routes>
   </div>
