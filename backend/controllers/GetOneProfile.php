@@ -9,7 +9,7 @@ require_once("../models/Profiles.php");
 
 $path = explode('/', $_SERVER['REQUEST_URI']);
 //var_dump($path) ;
-$userId = intval($path[6]);
+$userId = intval($path[5]);
 //echo $userId;
 
         $profileModel = new Profiles;

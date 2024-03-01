@@ -45,7 +45,7 @@ const AddProfile = (props)=>{
   
       const allDepartments = async () => {
         try {
-            axios.get(`http://localhost:80/BeautySalonTest/backend/controllers/GetAllDepartments.php`)
+            axios.get(`http://localhost:80/BeautySalon/backend/controllers/GetAllDepartments.php`)
             .then(res => {
               console.log(res.data.departmentList)
               setDepartment(res.data.departmentList);
@@ -90,7 +90,7 @@ const AddProfile = (props)=>{
                     about,
                     file,
                     }
-                    await axios.post('http://localhost:80/BeautySalon/frontend/controllers/AddProfile.php/', formData,{
+                    await axios.post('http://localhost:80/BeautySalon/backend/controllers/AddProfile.php/', formData,{
                 headers: {
                     'content-type': 'multipart/form-data'
                 }

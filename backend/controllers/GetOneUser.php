@@ -10,7 +10,7 @@ require_once("../models/Users.php");
 
 $path = explode('/', $_SERVER['REQUEST_URI']);
 
-$userId = intval($path[6]);
+$userId = intval($path[5]);
 
 $userModel = new Users;
 $foundUser = $userModel->getUserById($userId);

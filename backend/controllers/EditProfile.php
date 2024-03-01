@@ -14,7 +14,8 @@ $target_dir = 'C:\xampp\htdocs/BeautySalon/backend/uploads/';
 
 $path = explode('/', $_SERVER['REQUEST_URI']);
 //$userId = $data->userId;
-$userId = intval($path[4]);
+//var_dump($path);
+//$userId = intval($path[5]);
 
   $departmentId = $_POST['departmentId'];
   $phone = $_POST['phone'];
