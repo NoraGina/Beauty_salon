@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap");
+
+.appointments-container{
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 5px;
+}
+.appointmentstable-header{
+    display: inline-flex;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-wrap: nowrap;
+    width: fit-content;
+}
+.appointments-title {
+    color: #312450;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .appointments-title-error{
+    color: #bb1010;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .new-appointment-btn {
+    color: #fff;
+    background-color: #312450;
+    border: none;
+    border-radius: 1em;
+    font-size: 1.2em;
+    margin-left: 10px;
+    padding: 6px;
+    opacity: 0.7;
+    transition: 0.5s;
+    text-decoration: none;
+    -webkit-transition: 0.5s;
+    text-transform: uppercase;
+  }
+  .new-appointment-btn:hover{
+    opacity: 1;
+  }
+  .appointments-table-wrapper{
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+  }
+  .appointments-table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+  }
+  .appointments-table tbody tr{
+    border: solid 1px gray;
+    border-left: 0;
+    border-right: 0;
+  }
+  .appointments-table td {
+    padding: 0.75em 0.75em;
+    white-space: nowrap;
+  }
+  .appointments-table th{
+    background: #5e42a6;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.75em 0.75em 0.75em 0.75em;
+    text-align: left;
+  } 
+
+  .appointments-table thead{
+    border-bottom: solid 2px darkgray;
+    border-top: solid 2px darkgray;
+  }
+  .appointments-table tr:nth-of-type(odd) {
+    background: #d8ccf8;
+  }
+  .appointments-table tr:nth-of-type(even) {
+    color: white;
+    background: #6d5e94;
+  }
+  /* .appointments-table td:last-child{
+    width:100%;
+} */
+/* for large tablets */
+@media only screen and (min-width: 769px) and (max-width: 990px){
+    .appointments-container  {
+        margin: 12% auto;
+      }
+    
+      .appointments-table-wrapper{
+         width:90%;
+         -webkit-overflow-scrolling:unset;
+         overflow-x: hidden;
+        }
+      .responsive-appointments-table thead {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+      }
+    
+      .responsive-appointments-table tr {
+        display: block;
+        margin-bottom: 0.625em;
+      }
+    
+      .responsive-appointments-table td {
+        border: 1px solid;
+        border-bottom: none;
+        display: block;
+        text-align: right;
+      }
+      .responsive-appointments-table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    
+      .responsive-appointments-table td:last-child {
+        border-bottom: 1px solid;
+      }
+}
+/* for smaller tablets*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .appointments-container  {
+      margin: 12% auto;
+    }
+  
+    .appointments-table-wrapper{
+       width:90%;
+      }
+    .responsive-appointments-table thead {
+      visibility: hidden;
+      height: 0;
+      position: absolute;
+    }
+  
+    .responsive-appointments-table tr {
+      display: block;
+      margin-bottom: 0.625em;
+      width: 90%;
+    }
+  
+    .responsive-appointments-table td {
+      border: 1px solid;
+      border-bottom: none;
+      display: block;
+  
+      text-align: right;
+    }
+    .responsive-appointments-table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .responsive-appointments-table td:last-child {
+      border-bottom: 1px solid;
+    }
+    
+  }
+  @media only screen and (max-width: 480px) {
+    .appointments-container  {
+      margin: 12% auto;
+      width: 100%;
+    }
+  
+    .appointments-table-wrapper{
+        margin: auto;
+        width:100%;
+       }
+    .responsive-appointments-table thead {
+      visibility: hidden;
+      height: 0;
+      position: absolute;
+    }
+  
+    .responsive-appointments-table tr {
+      display: block;
+      margin-bottom: 0.625em;
+    }
+  
+    .responsive-appointments-table td {
+      border: 1px solid;
+      border-bottom: none;
+      display: block;
+  
+      text-align: right;
+    }
+    .responsive-appointments-table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .responsive-appointments-table td:last-child {
+      border-bottom: 1px solid;
+    }
+    .responsive-appointments-table{
+        width: 100%;
+    }
+    
+  }
+  

@@ -4,6 +4,9 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Team from './components/Team';
 import ViewPortofolio from './components/ViewPortofolio';
+import ViewPriceList from './components/ViewPriceList';
+import Appointment from './components/Appointment';
+import MakeAppointment from './components/MakeAppointment';
 import Login from './components/Login';
 import Users from './components/Users';
 import AddUser from './components/AddUser';
@@ -15,6 +18,9 @@ import Schedules from './components/Schedules';
 import StaffPortofolios from './components/StaffPortofolios';
 import AddPortofolio from './components/AddPortofolio';
 import EditPortofolio from './components/EditPortofolio';
+import AdminPriceList from './components/AdminPriceList';
+import CreatePriceList from './components/CreatePriceList';
+import Appointments from './components/Appointments';
 
 const App =()=>{
 
@@ -73,6 +79,10 @@ return(
       <Route path="/" element={<Home isStaff={!!isStaff} isAdmin={!!isAdmin}/>}/>
       <Route path="team" element={<Team/>}/>
       <Route path = "/viewPortofolio/:id" element={<ViewPortofolio/>}/>
+      <Route path="viewPriceList" element={<ViewPriceList/>}/>
+      <Route path="appointment/:id/:departmentId" element={<Appointment/>}/>
+      <Route path="makeAppointment" element={<MakeAppointment/>}/>
+
       {!user&& <>
         <Route path="login" element={<Login/>}/>
       </>}
@@ -87,6 +97,8 @@ return(
         <Route path='staffPortofolios/:id' element={<StaffPortofolios isAdmin={!!isAdmin}/> }/>
         <Route path='addPortofolio/:id' element={<AddPortofolio isAdmin={!!isAdmin}/> }/>
         <Route path="editPortofolio/:id" element={<EditPortofolio isAdmin={!!isAdmin}/>}/>
+        <Route path='/adminPriceList/:id' element={<AdminPriceList/>}/>
+        <Route path='/createPriceList/:id' element={<CreatePriceList/>}/>
       </>}
       {!!isStaff&&<>
         <Route path="profile/add" element={<AddProfile isAdmin={!!isAdmin}/>}/>
@@ -94,8 +106,9 @@ return(
         <Route path='/addSchedule/:id' element={<AddSchedule />}/>
         <Route path='/schedules/:id' element={<Schedules isStaff={!!isStaff}/>}/>
         <Route path='staffPortofolios/:id' element={<StaffPortofolios isAdmin={!!isAdmin}/> }/>
-      <Route path='addPortofolio/:id' element={<AddPortofolio isAdmin={!!isAdmin}/> }/>
-      <Route path="editPortofolio/:id" element={<EditPortofolio isAdmin={!!isAdmin}/>}/>
+        <Route path='addPortofolio/:id' element={<AddPortofolio isAdmin={!!isAdmin}/> }/>
+        <Route path="editPortofolio/:id" element={<EditPortofolio isAdmin={!!isAdmin}/>}/>
+        <Route path='/appointments/:id' element={<Appointments loggedUser={!!user}/>}/>
       </>}
       </Routes>
   </div>

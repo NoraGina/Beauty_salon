@@ -43,7 +43,7 @@ const Team =()=>
                                     <p className="about-text">{profile.about}</p>
                                 </div>
                                 <div className="card-footer">
-                                    <Link to={profile} className='link-item appointment-link'>Appointment</Link>
+                                    <Link to={`/appointment/${profile.id}/${profile.departmentId}`} className='link-item appointment-link'>Appointment</Link>
                                     <Link to={`/viewProfile/${profile.id}`} className='link-item team-profile-link'>About</Link>
                                     {profile.hasPortofolio === 1 ?
                                         <Link to={`/viewPortofolio/${profile.id}`} className='link-item portofolio-link'>Portofolio</Link> : ""}
