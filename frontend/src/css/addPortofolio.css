@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+.portofolio-container{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 3%;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+}
+#addPortofolioForm{
+    background-color: rgba(143, 143, 142, 0.455);
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 20px;
+    width: auto;
+}
+.addPortofolio-form-group{
+    margin-bottom: 5px;
+}
+.addPortofolio-form-group .addPortofolio-title{
+    color: darkblue;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
+.addPortofolio-form-group .addPortofolio-span{
+    color: darkblue;
+    display: inline-block;
+    font-size: 1.2em;
+    width: 130px;
+}
+.addPortofolio-form-group .addPortofolio-input{
+    border: 1px solid rgb(12, 26, 175);
+    border-radius: 3px;
+    line-height: 35px;
+    font-size: 1em;
+    padding: 15px 2px;
+    height: 30px;
+    width: 300px;  
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.addPortofolio-form-group .addPortofolio-textarea{
+    border: 1px solid rgb(12, 26, 175);
+    border-radius: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    padding: 3px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.addPortofolio-form-group #addPortofolioFile{
+    height:30px;
+}
+.input-file{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+} 
+ .input-file + label {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(12, 26, 175);
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 10px;
+    margin-left: 9px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 295px;  
+} 
+
+.input-file:focus + label,
+.input-file + label:hover {
+    border: 2px solid rgb(12, 26, 175);
+    box-shadow: 0 0 5px rgb(12, 26, 175);
+}
+.input-file:focus + label {
+	outline: 1px dotted rgb(12, 26, 175);
+	outline: -webkit-focus-ring-color auto 5px;
+} 
+.input-file + label * {
+	pointer-events: none;
+}
+ #imageName{
+    
+    color:rgb(38, 43, 200);
+    font-size: 1em;
+    padding: 10px 0 5px 140px;
+    width: 250px;
+}
+.addPortofolio-btn{
+    background: rgb(12, 26, 175);
+    background: linear-gradient(143deg, rgba(3, 86, 159, 0.743) 0%, rgb(52, 70, 99) 35%, rgb(12, 26, 175) 100%);
+    border: none;
+    border-radius: 3px;
+    color: wheat;
+    font-size: 1em;
+    font-weight: 600;
+    float: right;
+    padding: 6px 10px;
+    opacity: 0.7;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    text-transform: uppercase;
+}
+.addPortofolio-btn:hover{
+    color: white;
+    opacity: 1;
+}
+.addPortofolio-form-group .d-block{
+    display: block;
+}
+@media only screen and (max-width: 480px){
+    .addPortofolio-form-group{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .addPortofolio-container{
+        padding-top: 20%;
+        padding-bottom: 10%;
+        height: auto;
+    }
+    
+    .addPortofolio-form-group .addPortofolio-input,
+    
+    .input-file + label,
+    
+    .addPortofolio-btn{
+        margin-left:auto;
+        width: 100%;
+    }
+    
+}

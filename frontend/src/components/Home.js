@@ -284,12 +284,10 @@ return(<main>
                     <p>{openMessage}</p>
                     <Link to={`/team`}><i className="bi bi-people-fill"></i>Our Team</Link>
                 </div>
-                <div className="blank content-text">
-
-                        <p className="content"><span className="first-letter red">M</span>
-                            <span className="rest-text">eet our team that {appMessage}</span></p>
-
-                    </div>
+                <div className="blank">
+                          <p className="message-content"><span className="first-letter red">M</span>
+                            <span className="rest-text">eet our team that {" "} {appMessage}</span></p>
+                </div>
                     <div className="second">
                         {!!profiles ?
                             <div className="cards">

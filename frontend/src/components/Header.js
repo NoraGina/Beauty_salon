@@ -175,12 +175,7 @@ const Header = (props)=>{
                     <div className="right-part" id="navlistRight">
                      
                        {!props.loggedUser&& <>
-                        <div className='nav-item'>
-                            <Link to="/signup" className='nav-link'>
-                                <i className="bi bi-person-plus-fill"> Signup</i>
-                            </Link>
-                        </div>
-                       
+                           
                         
                         <div className='nav-item'>
                             <Link to="/login" className='nav-link'>

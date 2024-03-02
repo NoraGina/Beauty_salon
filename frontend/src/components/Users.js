@@ -68,7 +68,7 @@ const Users = ()=>{
                             <th scope='col'>Profile</th>
                             <th scope='col'>Portofolio</th>
                             <th scope='col'>Schedules</th>
-                            <th scope='col'>Clean schedule</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -130,13 +130,7 @@ const Users = ()=>{
                                 }
                            
                             </td>
-                            <td data-label="Clean schedules">
-                            {user.role === "STAFF" ?
-                                 <Link to={`/cleanSchedules/${user.id}`} className="link-item schedules-clean-link"><i className="bi bi-trash-fill delete-icon"></i>Schedules</Link>:
-                                 
-                                 ""
-                                }
-                            </td>
+                            
                         </tr>
                 )}
 

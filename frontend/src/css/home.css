@@ -55,13 +55,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-  width: 100%;
-  min-height: 40vh;
-  background-color: var(--color);
+    width: 100%;
+    min-height: 40vh;
+   background-color: var(--color);
   
 }
 
-.content-text .content{
+.blank .message-content{
     color: white;
     font-size: 2em;
     font-weight: 400;
